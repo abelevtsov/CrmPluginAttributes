@@ -25,10 +25,6 @@ namespace PluginTests
         /// Deny deletion of active rare_search entities
         /// </summary>
         /// <exception cref="CrmException">Deletion of active rare_search records is forbidden!</exception>
-        /// <summary>
-        /// Deny deletion of active rare_search entities
-        /// </summary>
-        /// <exception cref="CrmException">Deletion of active rare_search records is forbidden!</exception>
         [PluginStep(rare_search.EntityLogicalName, "Delete", PluginStage.PostOperation, PluginExecutionMode.Synchronous, rank: 2)]
         public override void OnDelete(IPluginExecutionContext context, string entityName, Guid primaryEntityId, [ImageParameters("statuscode")]rare_search preEntityImage)
         {
