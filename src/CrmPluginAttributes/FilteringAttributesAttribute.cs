@@ -21,22 +21,16 @@ namespace CrmPluginAttributes
             ExcludeAttributes = new string[] { };
         }
 
-        public string[] Attributes
-        {
-            get
-            {
-                return IncludeAttributes.Except(ExcludeAttributes).ToArray();
-            }
-        }
+        public string[] Attributes => IncludeAttributes.Except(ExcludeAttributes).ToArray();
+
+        private string[] IncludeAttributes { get; set; }
+
+        private string[] ExcludeAttributes { get; set; }
 
         public override string ToString()
         {
             var str = string.Join(",", Attributes);
             return str == "*" ? string.Empty : str;
         }
-
-        private string[] IncludeAttributes { get; set; }
-
-        private string[] ExcludeAttributes { get; set; }
     }
 }

@@ -51,6 +51,8 @@
     <Compile Include="PluginStage.cs" />
     <Compile Include="PluginStepAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceOperation.cs" />
+    <Compile Include="ServiceOperationAttribute.cs" />
     <Compile Include="WorkflowActivityAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
